@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs")%>
+
+<body>
+    <%- include("./partials/nav.ejs") %> <!-- use -% to run functions and get the return value. check partial/nav.ejs to see navbar code --> 
+    <div>
+        <form>
+            <label for="title"> Blog title: </label>
+            <input type="text" id="title" required>
+            <label for="snippet"> snippet: </label>
+            <input type="text" id="snippet" required>
+            <label for="body"> Blog title </label>
+            <textarea id="body" required> </textarea>
+            <button type = "submit"> submit </button>
+
+
+        </form>
+    </div>
+</body>
+<%- include("./partials/footer.ejs")%>
+</html>

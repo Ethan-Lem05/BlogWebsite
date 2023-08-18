@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs")%>
+
+<body>
+    <% const hello = "All blogs" %>
+    
+    <%- include("./partials/nav.ejs") %> <!-- use -% to run functions and get the return value -->
+    <div>
+        <h3><%= hello %></h3>
+        <% if(blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <h3 class = "title"> <%=blog.title%> </h3>
+                <p class = "snippet"> <%=blog.snippet%> </p>
+            <% }) %>
+        <% } else {%>
+            <h3> no blogs available </h3>
+        <%}%>
+    </div>
+</body>
+
+<%- include("./partials/footer.ejs")%>
+</html>

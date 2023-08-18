@@ -2,8 +2,7 @@ const express = require("express");
 //express creates APIs that allow someone to access  
 
 const app = express(); // starts a server
-//register view engine
-app.set('view-engine', 'ejs'); 
+
 
 //listen for requests
 app.listen(3000, "localhost");
