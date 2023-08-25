@@ -3,12 +3,18 @@ const express = require("express");
 
 const app = express(); // starts a server
 
+const mongoose = require("mongoose");
+
 app.set("view engine", "ejs"); // sets up a view engine and allows you to send dynamic data to a website
 app.set("views", "RelearningNodeJS/views");
 
 
 //listen for requests
 app.listen(3000, "localhost");
+
+//connect to database 
+const dbURI = "
+mongodb+srv://<username>:<password>@cluster0.tcowpev.mongodb.net/?retryWrites=true&w=majority"
 
 app.get("/", (req,res) => {
     //res.send("<p> home page </p>"); //writes and ends the response
